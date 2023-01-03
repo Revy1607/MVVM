@@ -54,11 +54,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Khi kết quả được trả về từ Activity khác, hàm onActivityResult sẽ được gọi
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        // Kiểm tra requestCode có trùng với REQUEST_CODE vừa dùng, RESULT_OK chỉ ra rằng kết quả này đã thành công
         if(requestCode == ADD_NOTE_REQUEST && resultCode == RESULT_OK){
+            // Nhận dữ liệu từ Intent trả về
             String title = data.getStringExtra(AddNoteActivity.EXTRA_TITLE);
             String des = data.getStringExtra(AddNoteActivity.EXTRA_DES);
             int priority = data.getIntExtra(AddNoteActivity.EXTRA_PRIORITY, 1);

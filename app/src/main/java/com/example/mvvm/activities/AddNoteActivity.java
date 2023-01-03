@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.mvvm.R;
 
 public class AddNoteActivity extends AppCompatActivity {
+    // Biến constant được dùng để định danh dữ liệu được truyền giữa các Activity
     public static final String EXTRA_TITLE = "com.example.mvvm.EXTRA_TITLE";
     public static final String EXTRA_DES = "com.example.mvvm.EXTRA_DES";
     public static final String EXTRA_PRIORITY = "com.example.mvvm.EXTRA_PRIORITY";
@@ -49,12 +50,16 @@ public class AddNoteActivity extends AppCompatActivity {
             return;
         }
 
+        //Tạo 1 intent để chứa dữ liệu trả về
         Intent data = new Intent();
+        //truyền data vào intent
         data.putExtra(EXTRA_TITLE, title);
         data.putExtra(EXTRA_DES, des);
         data.putExtra(EXTRA_PRIORITY, priority);
 
+        // Đặt resultCode là RESULT_OK thể hiện đã thành công và có chứa kết quả trả về
         setResult(RESULT_OK, data);
+        //gọi hàm finish() để đóng Activity hiện tại và trở về MainActivity.
         finish();
     }
 
