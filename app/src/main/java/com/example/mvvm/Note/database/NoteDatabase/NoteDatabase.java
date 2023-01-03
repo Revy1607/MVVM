@@ -1,4 +1,4 @@
-package com.example.mvvm.database.NoteDatabase;
+package com.example.mvvm.Note.database.NoteDatabase;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -9,8 +9,8 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import com.example.mvvm.database.DAO.NoteDAO;
-import com.example.mvvm.model.Note;
+import com.example.mvvm.Note.database.DAO.NoteDAO;
+import com.example.mvvm.Note.model.Note;
 
 @Database(entities = {Note.class}, version = 1)
 public abstract class NoteDatabase extends RoomDatabase {
@@ -52,7 +52,6 @@ public abstract class NoteDatabase extends RoomDatabase {
             noteDAO.insert(new Note("Title 2", "Description 2", 2));
             return null;
         }
+
     }
-
-
 }

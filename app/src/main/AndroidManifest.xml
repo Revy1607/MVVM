@@ -14,11 +14,11 @@
         android:theme="@style/Theme.MVVM"
         tools:targetApi="31">
         <activity
-            android:name=".activities.AddNoteActivity"
-            android:parentActivityName=".activities.MainActivity"
+            android:name=".Note.activities.AddNoteActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".MainActivity"
             android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>

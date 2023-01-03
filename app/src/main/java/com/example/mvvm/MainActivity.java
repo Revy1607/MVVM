@@ -1,4 +1,4 @@
-package com.example.mvvm.activities;
+package com.example.mvvm;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +12,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.mvvm.R;
-import com.example.mvvm.adapter.NoteAdapter;
-import com.example.mvvm.model.Note;
-import com.example.mvvm.viewmodel.NoteViewModel;
+import com.example.mvvm.Note.adapter.NoteAdapter;
+import com.example.mvvm.Note.model.Note;
+import com.example.mvvm.Note.viewmodel.NoteViewModel;
+import com.example.mvvm.Note.activities.AddNoteActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -52,6 +52,23 @@ public class MainActivity extends AppCompatActivity {
                 adapter.setNotes(notes);
             }
         });
+
+//        new ItemTouchHelper(new ItemTouchHelper.Callback() {
+//            @Override
+//            public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
+//                return 0;
+//            }
+//
+//            @Override
+//            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+//                return false;
+//            }
+//
+//            @Override
+//            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+//
+//            }
+//        })
     }
 
     // Khi kết quả được trả về từ Activity khác, hàm onActivityResult sẽ được gọi

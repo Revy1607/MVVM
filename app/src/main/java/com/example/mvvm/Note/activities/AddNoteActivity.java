@@ -1,4 +1,4 @@
-package com.example.mvvm.activities;
+package com.example.mvvm.Note.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

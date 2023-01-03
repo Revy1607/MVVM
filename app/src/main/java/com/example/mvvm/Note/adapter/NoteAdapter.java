@@ -1,4 +1,4 @@
-package com.example.mvvm.adapter;
+package com.example.mvvm.Note.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mvvm.R;
-import com.example.mvvm.model.Note;
+import com.example.mvvm.Note.model.Note;
 
 import java.util.ArrayList;
 import java.util.List;
