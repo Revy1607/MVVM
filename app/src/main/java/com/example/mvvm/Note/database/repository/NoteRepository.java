@@ -1,4 +1,4 @@
-package com.example.mvvm.Note.repository;
+package com.example.mvvm.Note.database.repository;
 
 import android.app.Application;
 import android.os.AsyncTask;

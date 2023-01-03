@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.example.mvvm.Note.model.Note;
-import com.example.mvvm.Note.repository.NoteRepository;
+import com.example.mvvm.Note.database.repository.NoteRepository;
 
 import java.util.List;
 
