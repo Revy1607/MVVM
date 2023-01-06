@@ -12,6 +12,13 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.example.mvvm.Note.database.DAO.NoteDAO;
 import com.example.mvvm.Note.model.Note;
 
+import java.util.List;
+
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+
 @Database(entities = {Note.class}, version = 1)
 public abstract class NoteDatabase extends RoomDatabase {
 
@@ -22,7 +29,7 @@ public abstract class NoteDatabase extends RoomDatabase {
         if(instance == null){
             instance = Room.databaseBuilder(context.getApplicationContext(), NoteDatabase.class, DATABASE_NAME)
                     .allowMainThreadQueries()
-                    //.fallbackToDestructiveMigration()
+                    .fallbackToDestructiveMigration()
                     .addCallback(roomCallback)
                     .build();
         }
@@ -54,4 +61,14 @@ public abstract class NoteDatabase extends RoomDatabase {
         }
 
     }
+
+
+//    Observable<Note> noteObservable = Observable
+//            .fromIterable()
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread());
+
+
+
 }
+
